@@ -1,0 +1,17 @@
+#areaSobre{
+	background-color: red;
+	padding: 50px 50px 50px 50px;
+	margin-left: 200px;
+	margin-right: 80px;
+	margin-top: 80px;
+	color: white;
+	font-size: 2em;
+	border-color: transparent;
+	border-radius: 20px;
+	width: 60%;
+}
+
+
+#areaSobre p{
+	padding: 10px 10px 10px 10px;
+}
