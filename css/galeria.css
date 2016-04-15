@@ -9,16 +9,6 @@
     visibility: hidden;
 }
 
-body h2{
-    color: #D61A1A;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: left;
-    font-family: sans-serif;
-    margin-left: 10%;
-    
-}
-
 #main label{
     float: left;
     cursor: pointer;
@@ -101,6 +91,7 @@ figure{
     margin: 1%;
     margin-bottom: 50px;
     border-radius: 5px;
+    
 }
 
 figure figcaption{
