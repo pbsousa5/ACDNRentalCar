@@ -1,17 +1,25 @@
 #areaSobre{
 	background-color: #FF8C00;
 	padding: 50px 50px 50px 50px;
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-right: 80px;
 	margin-top: 80px;
 	color: white;
 	font-size: 2em;
 	border-color: transparent;
 	border-radius: 20px;
-	width: 60%;
+	width: 40%;
 }
 
+#areaContato{
+	background-color: #FF8C00;
+	padding: 50px 50px 50px 50px;
+	color: white;
+	font-size: 2em;
+	border-color: transparent;
+	border-radius: 20px;
+	position: absolute;
+	top: 200px;
+	right: 80px;
 
-#areaSobre p{
-	
 }
