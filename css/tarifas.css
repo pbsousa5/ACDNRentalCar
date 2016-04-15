@@ -1,0 +1,40 @@
+body h2{
+    color: #D61A1A;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    font-family: sans-serif;
+    margin-left: 10%;
+    
+}
+
+#main{
+    width: 900px;  
+    margin: 40px auto;
+    box-sizing: border-box;    
+}
+
+table{
+    width: 90%;
+    height: 200px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+th{
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: #FF8C00;
+}
+
+tr:nth-child(even){
+    background-color: #FFFFFF; 
+}
+
+tr:nth-child(odd){
+    background-color: #F8EA6B;
+}
