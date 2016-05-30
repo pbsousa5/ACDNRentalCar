@@ -1,218 +1,57 @@
-h1{
-margin:15px 0 7px 0;
-}
-
-header { 
-	position:relative; 
-	background-color: #172B65;  
-}
-
-body{
-    font: 0.8em/1.5 "arial",sans-serif; 
-    color: #303030; 
-    background-color: #F7F7F7;
-}
-
-body h2{
-    color: #FFFFFF;
-    width: 25%;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: left;
-    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
-    margin-left: 10%;   
-    text-align: center;
-}
-
-.transparente{
-	background-color: rgba(255,118,0,0.9);
-}
-
 #logo {
-	font-family: 'Trebuchet MS', 'Geneva CE', lucida, sans-serif;
-	position: relative; 
-	overflow: hidden; 
-	width: 300px; 
-	height: 108px;
-	font-size:230%;
-	margin: 0;
-	line-height: 108px;
-	text-align: center;
-}
-
-#logo a{
-	text-decoration: none;
-	color: #fff;
-	font-weight: normal;
-	border-left: 8px solid #D61A1A;  
-	padding: 0px 10px 2px 10px;  
-}
-
-#logo span {
-	background: -webkit-linear-gradient(#EF1818, #EBFF7E);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	font-weight: bold;
-}
-
-nav{
-	position: absolute;
-	left: 700px;
-	line-height: 113px;
-	display: block;
-	height: 108px;
-	width: 530px;
-	top: 0;
-	text-align: right;
-	font-size: 150%;
-}
-
-.tabActive{
-	border-bottom: 1px solid white;
-	padding-bottom: 10px;
-	padding-left: 2px;
-	padding-right: 2px;
-}
-
-nav ul li{
 	display: inline;
 }
-
-nav li a {
-	color: #cacaca;
-	padding: 50px 10px;
-	text-decoration: none;
+#logoImg{
+	height: 22px;
+	width: 10px;
+	background-color: #ed0000;
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 3px;
+	margin-left: 5px;
 }
-
-nav a:hover {
-	color: #fff;
-}
-
-form {
-	padding: 10px 0px 20px 10px;
-	border: 1px solid black;
-	width: 20%;
-	background-color: #FF8C00;
-	color: white;	
-	border-color: transparent;
-	font: "arial",sans-serif; 
-	border-top: 5px solid #000021;
-	font-size: 0.7em;
-	border-bottom: 5px solid #000021;
-	box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-left: 15px;
-	position: absolute;
-	top: 150px;
-	left: 0px;
-}
-
-#bannerIndex img{
-	width: 100%;
-	height: 200px;
-}
-
-form span input{
-	display: block;
-	padding: 10px 10px 10px 10px;
-	width: 90%;
-	margin-top: 1px;
-}
-
-.localFormulario,.dataFormulario{
-	display: block;
-	padding: 10px 10px 10px 10px;
-	font-weight: bold;
-	font-size: 1.6em;
-}
-
-.checkFormulario{
-	font-size: 1.4em;
-}
-
-#btnReservar{
-	margin-top: 30px;
-	margin-left: 95px;
-	font-size: 1.8em;
-	border-color: transparent;
-	background-color: red;
-	color: white;
-	width: 60%;
-	height: 30px;
-	cursor: pointer;
-}
-
-#btnReservar:active {
-    vertical-align: top;
-    padding: 4px 6px 6px;
-}
-
-#areaDestinosPopulares{
-	width: 60%;
-	position: absolute;
-	top: 350px;
-	right: 0px;
-	background-color: #FFFFFF;
-}
-
-#areaDestinosPopulares h5{
-	font-size: 3em;
-	float: left;
-}
-
-.destination,.destination2,.destination3{
-	background-color: #FFF !important;
-    border: #eee 1px solid;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    padding: 5% 4.5%;
-    overflow: hidden;
-    height: auto;
-    margin: 14px 2% 0px 0;
-    clear: both;
-    width: 20%;
-}
-
-.destination2{
-	position: absolute;
-	top: 40px;
-	right: 300px;
-}
-
-.destination3{
-	position: absolute;
-	top: 40px;
-	right: 80px;
-}
-
-.pais{
-	border-top: 1px dotted #d7d7d7;
-}
-
-footer {
-	position: fixed;
-	bottom: 0;
-	background-color: #172B65;
-	width: 100%;
-	height: 30px;
-    z-index:100;
-    
-}
-
-#textoFooter{
-	font: "arial",sans-serif;
+#barraSuperior{
+	display: inline;
 	float: right;
-	margin-right: 10px;
-	margin-top: 5px;
-	font-size: 1.2em;
-	color: #FFFFFF;
-    
+	margin-top: 20px;
 }
-
-.centralizar{
-	text-align: center;
+#barraSuperior li{
+	padding: 50px;
+	font-family: 'Josefin Sans';
 }
-
-.negritar{
-	font-weight: bold;
+.txtBranco{
+	color: #FFF
+}
+#textoFooter{
+	margin-right: 5px;
+}
+#main{
+	 background-image: 
+	    linear-gradient(
+	      rgba(0, 0, 0, 0.5),
+	      rgba(0, 0, 0, 0.5)
+	    ),
+	    url('../imgs/driver.jpg');
+	background-size:100% auto;
+	background-color: #fff;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#contact,#portfolio{
+	padding-top: 150px !important;
+}
+#about{ /*Area Tarifas*/
+	padding-top: 80px !important;
+	padding-bottom: 0px;
+	background-color: #fff;
+}
+ul{
+	list-style: none;
+}
+.cd-pricing-container,.cd-full-width{
+	margin-top: 0px !important;
+}
+.cd-pricing-list{
+	margin-top: 0px !important;
+	padding-left: 0px;
 }
