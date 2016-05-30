@@ -3,32 +3,6 @@
 Primary style
 
 -------------------------------- */
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #173d50;
-  background-color: #173d50;
-}
-
-a {
-  color: #e97d68;
-  text-decoration: none;
-}
 
 /* -------------------------------- 
 
@@ -397,7 +371,7 @@ Main Components
     display: inline-block;
     height: auto;
     padding: 1.3em 3em;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     border-radius: 2px;
     background-color: #0c1f28;
     font-size: 1.4rem;
