@@ -37,7 +37,7 @@
 	width: 100%;
 	background-repeat: no-repeat;
 }
-#contact,#portfolio{
+#portfolio{
 	padding-top: 150px !important;
 }
 #about{ /*Area Tarifas*/
@@ -45,6 +45,24 @@
 	padding-bottom: 0px;
 	background-color: #fff;
 }
+
+#areaSobre{
+	padding: 0px;
+	padding-top: 20px;
+}
+
+#areaContato{
+	padding: 0px;
+	padding-top: 20px;
+}
+#contact{
+	padding-bottom: 40px;
+}
+#contact{
+	padding-top: 100px !important;
+}
+
+
 ul{
 	list-style: none;
 }
