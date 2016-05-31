@@ -38,12 +38,15 @@
 	background-repeat: no-repeat;
 }
 #portfolio{
-	padding-top: 150px !important;
+	padding-top: 80px !important;
 }
 #about{ /*Area Tarifas*/
-	padding-top: 80px !important;
+	padding-top: 0px !important;
 	padding-bottom: 0px;
 	background-color: #fff;
+}
+#pricePlans{
+	padding-top: 80px;
 }
 
 #areaSobre{
@@ -56,10 +59,10 @@
 	padding-top: 20px;
 }
 #contact{
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 #contact{
-	padding-top: 100px !important;
+	padding-top: 80px !important;
 }
 
 
@@ -76,4 +79,5 @@ ul{
 
 .subtitle{
 	color: #FF0000;
+	font-style: italic;
 }
