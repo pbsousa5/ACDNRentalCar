@@ -25,6 +25,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +63,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+					<li class="page-scroll">
+                        <a href="#main">Reservar</a>
+                    </li>
                     <li class="page-scroll">
                         <a href="#portfolio">Galeria</a>
                     </li>
@@ -80,15 +84,44 @@
 
     <!-- Header -->
     <header>
-        <div id="main" class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-text">
-                        <span class="name">Planeje sua próxima experiência</span>
-                        <h2><small class="subtitle">Qualidade + Sem Taxas de Cancelamento = Satisfação do Cliente</small></h2>
+        <div id="main" class="row">
+            <div  class="row">
+                <div class="container containerReservar">
+                    <div id="formReservas" class=" col-md-4 col-sm-4 col-xs-4">
+                        <div class="formTopo">
+                            <div class="formTitulo">
+                                <h4>Reserve conosco agora mesmo!</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <form role="form" action="" method="post">
+                            <div class="form-group">
+                                <label for="pontoRetirada">Ponto de Retirada</label>
+                                <input type="text" name="pontoRetirada" placeholder="Pontos de Locação" class="pontoRetirada form-control" id="pontoRetirada">
+                            </div>
+                            <div class="form-group left-align">
+                                <input type="checkbox" name="checkDevolucao"  class="pull-left" id="checkDevolucao"><span class="labelCheck">Devolver em outro ponto</span>
+                            </div>                                
+                            <div class="form-group">
+                                <label  for="data de retirada">Data da Retirada</label>
+                                <input type="date" name="dataRetirada" class="dataRetirada form-control" id="dataRetirada">
+                            </div>
+                            <div class="form-group">
+                                <label for="data de devolucao">Data da Devolução</label>
+                                <input type="date" name="dataDevolução" class="dataDevolucao form-control" id="dataDevolução">
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-warning btnReservar"><strong>Alugar</strong></button>
+                        </form>
                     </div>
-                </div>
+                    <div class="col-md-8">
+                        <div class="intro-text">
+                            <h2 class="tituloMain">Planeje sua próxima experiência<h2>
+                            <h2><small class="subtitle">Qualidade + Sem Taxas de Cancelamento = Satisfação do Cliente</small></h2>
+                        </div>
+                    </div>
+                </div>                
             </div>
+            
         </div>
     </header>
 
@@ -108,7 +141,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/compacto01.png" class="img-responsive" alt="">
+							<figure>
+								<img src="imgs/luxo01.png" class="img-responsive" alt="">
+								<figcaption class="galeriaCaption"><h5>Carros de Luxo</h5></figcaption>
+							</figure>
 						</a>
 					</div>
 					<div class="col-sm-4 portfolio-item">
@@ -118,7 +154,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/grande01.png" class="img-responsive" alt="">
+							<figure>
+                                <img src="imgs/grande01.png" class="img-responsive" alt="">
+                                <figcaption class="galeriaCaption"><h5>Carros Grandes</h5></figcaption>
+                            </figure>
 						</a>
 					</div>
 					<div class="col-sm-4 portfolio-item">
@@ -128,7 +167,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/compacto03.png" class="img-responsive" alt="">
+							<figure>
+                                <img src="imgs/medio01.png" class="img-responsive" alt="">
+                                <figcaption class="galeriaCaption"><h5>Carros Médios</h5></figcaption>
+                            </figure>
 						</a>
 					</div>
 				</div>
@@ -140,7 +182,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/medio01.png" class="img-responsive" alt="">
+							<figure>
+                                <img src="imgs/compacto01.png" class="img-responsive" alt="">
+                                <figcaption class="galeriaCaption"><h5>Carros Compactos</h5></figcaption>
+                            </figure>
 						</a>
 					</div>
 					<div class="col-sm-4 portfolio-item">
@@ -150,7 +195,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/medio02.png" class="img-responsive" alt="">
+							<figure>
+                                <img src="imgs/subcompacto01.jpg" class="img-responsive" alt="">
+                                <figcaption class="galeriaCaption"><h5>Carros Subcompactos</h5></figcaption>
+                            </figure>
 						</a>
 					</div>
 					<div class="col-sm-4 portfolio-item">
@@ -160,7 +208,10 @@
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="imgs/luxo05.png" class="img-responsive" alt="">
+							<figure>
+                                <img src="imgs/microcar01.png" class="img-responsive" alt="">
+                                <figcaption class="galeriaCaption"><h5>Microcars</h5></figcaption>
+                            </figure>
 						</a>
 					</div>
 				</div>
@@ -177,16 +228,16 @@
                         <div class="col-md-4">
                             <li class="plan">
                                 <ul class="planContainer">
-                                    <li class="title"><h2>Plan 1</h2></li>
-                                    <li class="price"><p>$10/<span>month</span></p></li>
+                                    <li class="title"><h2>Micro/Sub/Compactos</h2></li>
+                                    <li class="price"><p>R$50/<span>dia</span></p></li>
                                     <li>
                                         <img src="imgs/mini-compacto01.png">
                                             <ul class="options">
-                                                <li>2x <span>option 1</span></li>
-                                                <li>Free <span>option 2</span></li>
-                                                <li>Unlimited <span>option 3</span></li>
-                                                <li>Unlimited <span>option 4</span></li>
-                                                <li>1x <span>option 5</span></li>
+												<li>1x <span>tanque Cheio</span></li>
+                                                <li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
+                                                <li>Free <span>desconto na próxima locação</span></li>
+												<li><span>Vantagens Exclusivas</span></li>
+												<li><span>Sem taxa de seguro</span></li>
                                             </ul>
                                     </li>
                                     <li class="button"><a href="#">Purchase</a></li>
@@ -196,16 +247,16 @@
                         <div class="col-md-4">
                             <li class="plan">
                                 <ul class="planContainer">
-                                    <li class="title"><h2 class="bestPlanTitle">Plan 2</h2></li>
-                                    <li class="price"><p class="bestPlanPrice">$20/month</p></li>
+                                    <li class="title"><h2 class="bestPlanTitle">Médios/Grandes</h2></li>
+                                    <li class="price"><p class="bestPlanPrice">R$150/dia</p></li>
                                     <li>
                                         <img src="imgs/mini-medio02.png">
                                         <ul class="options">
-                                            <li>2x <span>option 1</span></li>
-                                            <li>Free <span>option 2</span></li>
-                                            <li>Unlimited <span>option 3</span></li>
-                                            <li>Unlimited <span>option 4</span></li>
-                                            <li>1x <span>option 5</span></li>
+                                            <li>1x <span>tanque Cheio</span></li>
+											<li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
+											<li>Free <span>desconto na próxima locação</span></li>
+											<li><span>Vantagens Exclusivas</span></li>
+											<li><span>Sem taxa de seguro</span></li>
                                         </ul>
                                     </li>
                                     <li class="button"><a class="bestPlanButton" href="#">Purchase</a></li>
@@ -215,16 +266,16 @@
                         <div class="col-md-4">
                             <li class="plan">
                                 <ul class="planContainer">
-                                    <li class="title"><h2>Plan 3</h2></li>
-                                    <li class="price"><p>$30/<span>month</span></p></li>
+                                    <li class="title"><h2>Luxo</h2></li>
+                                    <li class="price"><p>R$200/<span>dia</span></p></li>
                                     <li>
                                         <img src="imgs/mini-luxo05.png">
                                         <ul class="options">
-                                            <li>2x <span>option 1</span></li>
-                                            <li>Free <span>option 2</span></li>
-                                            <li>Unlimited <span>option 3</span></li>
-                                            <li>Unlimited <span>option 4</span></li>
-                                            <li>1x <span>option 5</span></li>
+                                            <li>1x <span>tanque Cheio</span></li>
+											<li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
+											<li>Free <span>desconto na próxima locação</span></li>
+											<li><span>Vantagens Exclusivas</span></li>
+											<li><span>Sem taxa de seguro</span></li>
                                         </ul>
                                     </li>
                                     <li class="button"><a href="#">Purchase</a></li>
@@ -274,11 +325,11 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                        <h3>Endereço</h3>
+                        <p>Alguma avenida<br>por ai, BR</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
+                        <h3>Segue a gente</h3>
                         <ul class="list-inline">
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -298,24 +349,15 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        <h3>ACDN</h3>
+                        <p>Direitos Reservados - 2016</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <!-- Botao que leva ao topo da pagina, visivel apenas para telas pequenas -->
     <div class="scroll-top page-scroll visible-xs visible-sm">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
@@ -335,25 +377,46 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/compacto01.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<h2>Carros de Luxo</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/luxo01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/luxo02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/luxo03.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/luxo04.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/luxo05.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>
+							
                         </div>
                     </div>
                 </div>
@@ -372,25 +435,43 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/grande01.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<h2>Carros Grandes</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/grande01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/grande02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/grande03.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/grande04.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>
+							
                         </div>
                     </div>
                 </div>
@@ -409,25 +490,42 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/compacto03.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<h2>Carros Médios</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/medio01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/medio02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/medio03.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/medio04.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>	
                         </div>
                     </div>
                 </div>
@@ -446,25 +544,42 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/medio01.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<h2>Carros Compactos</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/compacto01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/compacto02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/compacto03.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/compacto04.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>	
                         </div>
                     </div>
                 </div>
@@ -482,26 +597,43 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/medio02.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                         <div class="modal-body">
+							<h2>Carros Subcompactos</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/subcompacto01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/subcompacto02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/subcompacto03.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/subcompacto04.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>	
                         </div>
                     </div>
                 </div>
@@ -519,26 +651,43 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="imgs/luxo05.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                         <div class="modal-body">
+							<h2>Mcrocars</h2>
+							<hr class="star-primary">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="imgs/microcar01.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/microcar02.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/subcompacto05.png" class="img-responsive img-centered" alt="...">
+								</div>
+								<div class="item">
+								  <img src="imgs/subcompacto06.png" class="img-responsive img-centered" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>	
                         </div>
                     </div>
                 </div>
@@ -562,3 +711,4 @@
 </body>
 
 </html>
+

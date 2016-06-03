@@ -36,6 +36,7 @@
 	background-color: #fff;
 	width: 100%;
 	background-repeat: no-repeat;
+	margin-left: 0px;
 }
 #portfolio{
 	padding-top: 80px !important;
@@ -62,6 +63,7 @@
 	padding-bottom: 20px;
 }
 #contact{
+	font-family: 'Raleway', sans-serif;
 	padding-top: 80px !important;
 }
 
@@ -80,4 +82,67 @@ ul{
 .subtitle{
 	color: #FF0000;
 	font-style: italic;
+	font-family: 'Raleway', sans-serif;
+}
+.galeriaCaption{
+	text-align: center;
+}
+.formularioReserva {
+	color: #FF0000;
+	text-align: left;
+}
+.formularioReserva .panel-heading{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.carousel-control{
+	background-color: #999999;
+}
+#reserva{
+ background-color: 
+	    linear-gradient(
+	      rgba(0, 0, 0, 0.5),
+	      rgba(0, 0, 0, 0.5)
+	    ),
+	    url('../imgs/bannerIndex.jpeg');
+	background-size:100% auto;
+	background-color: #fff;
+	background-repeat: no-repeat;
+}
+.tituloMain{
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+}
+#checkDevolucao{
+	width: 5%;
+	height: 22px;
+	margin-right: 10px;
+	margin-top: 0px;
+}
+.labelCheck{
+	font-weight: bold;
+}
+.left-align{
+	text-align: left;
+}
+.containerReservar{
+	margin-left: 40px;
+}
+
+#formReservas{
+	font-family: 'Raleway', sans-serif;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	text-align: left;
+}
+
+.formTopo{
+	background-color: #434343;
+	padding: 2px;
+	margin-bottom: 20px;
+	font-size: 1em;
+}
+
+.btnReservar{
+	float: right;
 }
