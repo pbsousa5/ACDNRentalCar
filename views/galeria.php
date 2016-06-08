@@ -1,130 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-
-    <title>ACDN - Rental Cars</title>
-
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/pricing.css"> <!-- Resource style -->
-
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">
-                    <span id="logo">
-                        <span id="logoImg">&nbsp;</span>
-                            <span class="">ACDN Rental Cars</span>
-                    </span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<li class="page-scroll">
-                        <a href="#main">Reservar</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Galeria</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">Tarifas</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Sobre</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div id="main" class="row">
-            <div  class="row">
-                <div class="container containerReservar">
-                    <div id="formReservas" class=" col-md-4 col-sm-8 col-xs-8">
-                        <div class="formTopo">
-                            <div class="formTitulo">
-                                <h4>Reserve conosco agora mesmo!</h4>
-                                <p></p>
-                            </div>
-                        </div>
-                        <form role="form" action="" method="post">
-                            <div class="form-group">
-                                <label for="pontoRetirada">Ponto de Retirada</label>
-                                <input type="text" name="pontoRetirada" placeholder="Pontos de Locação" class="pontoRetirada form-control" id="pontoRetirada">
-                            </div>
-                            <div class="form-group left-align">
-                                <input type="checkbox" name="checkDevolucao"  class="pull-left" id="checkDevolucao"><span class="labelCheck">Devolver em outro ponto</span>
-                            </div>                                
-                            <div class="form-group">
-                                <label  for="data de retirada">Data da Retirada</label>
-                                <input type="date" name="dataRetirada" class="dataRetirada form-control" id="dataRetirada">
-                            </div>
-                            <div class="form-group">
-                                <label for="data de devolucao">Data da Devolução</label>
-                                <input type="date" name="dataDevolução" class="dataDevolucao form-control" id="dataDevolução">
-                            </div>
-                            <button type="submit" class="btn btn-lg btn-warning btnReservar"><strong>Alugar</strong></button>
-                        </form>
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-                        <div class="intro-text">
-                            <h2 class="tituloMain">Planeje sua próxima experiência<h2>
-                            <h2><small class="subtitle">Qualidade + Sem Taxas de Cancelamento = Satisfação do Cliente</small></h2>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            
-        </div>
-    </header>
-
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
         <div class="container">
@@ -220,151 +93,7 @@
     </section>
 
 
-    <!-- About Section -->
-    <section class="success" id="about">
-            <section id="pricePlans">
-                <div class="row">
-                    <ul id="plans">
-                        <div class="col-md-4">
-                            <li class="plan">
-                                <ul class="planContainer">
-                                    <li class="title"><h2>Micro/Sub/Compactos</h2></li>
-                                    <li class="price"><p>R$50/<span>dia</span></p></li>
-                                    <li>
-                                        <img src="imgs/mini-compacto01.png">
-                                            <ul class="options">
-												<li>1x <span>tanque Cheio</span></li>
-                                                <li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
-                                                <li>Free <span>desconto na próxima locação</span></li>
-												<li><span>Vantagens Exclusivas</span></li>
-												<li><span>Sem taxa de seguro</span></li>
-                                            </ul>
-                                    </li>
-                                    <li class="button"><a href="#">Purchase</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="col-md-4">
-                            <li class="plan">
-                                <ul class="planContainer">
-                                    <li class="title"><h2 class="bestPlanTitle">Médios/Grandes</h2></li>
-                                    <li class="price"><p class="bestPlanPrice">R$150/dia</p></li>
-                                    <li>
-                                        <img src="imgs/mini-medio02.png">
-                                        <ul class="options">
-                                            <li>1x <span>tanque Cheio</span></li>
-											<li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
-											<li>Free <span>desconto na próxima locação</span></li>
-											<li><span>Vantagens Exclusivas</span></li>
-											<li><span>Sem taxa de seguro</span></li>
-                                        </ul>
-                                    </li>
-                                    <li class="button"><a class="bestPlanButton" href="#">Purchase</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                        <div class="col-md-4">
-                            <li class="plan">
-                                <ul class="planContainer">
-                                    <li class="title"><h2>Luxo</h2></li>
-                                    <li class="price"><p>R$200/<span>dia</span></p></li>
-                                    <li>
-                                        <img src="imgs/mini-luxo05.png">
-                                        <ul class="options">
-                                            <li>1x <span>tanque Cheio</span></li>
-											<li>2x <span>+ cupons para Viagem dos Sonhos</span></li>
-											<li>Free <span>desconto na próxima locação</span></li>
-											<li><span>Vantagens Exclusivas</span></li>
-											<li><span>Sem taxa de seguro</span></li>
-                                        </ul>
-                                    </li>
-                                    <li class="button"><a href="#">Purchase</a></li>
-                                </ul>
-                            </li>
-                        </div>
-                    </ul> <!-- End ul#plans -->
-                </div>
-            </section>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-					<div class="container">
-					  <div class="jumbotron">
-						<h1>Sobre nós</h1>      
-							<section id="areaSobre">
-								<p>ACDN Rental Cars é sua melhor escolha para locação de veículos.
-									<p class="centralizar"> Oferecemos o <span class="negritar">melhor serviço</span>.</p>
-								</p>
-								<p> Com muito tempo de estrada, a ACDN tem consolidado sua reputação através de bons negocios e clientes fieis.</p>
-								<p class="centralizar negritar"> Junte-se a nós!</p>		
-							</section>
-							<section id="areaContato">
-								<h3> Contato </h3>
-								<p>
-									<p>ACDNRental@mail.com</p>
-									<p>Fone: (98) 99999 - 9999</p>
-								</p>
-							</section>
-					  </div>    
-					</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Endereço</h3>
-                        <p>Alguma avenida<br>por ai, BR</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Segue a gente</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>ACDN</h3>
-                        <p>Direitos Reservados - 2016</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Botao que leva ao topo da pagina, visivel apenas para telas pequenas -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
+ <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -423,7 +152,8 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -586,7 +316,8 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+
+   <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -694,21 +425,3 @@
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <!-- Plugin responsavel pela animacao de scroll ao clicar em alguma opcao do header -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-
-</body>
-
-</html>
-
