@@ -1,0 +1,16 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^home?$ index.php
+RewriteRule ^adm?$ views/adm_login.php
+RewriteRule ^dashboard?$ views/dashboard.php
+RewriteRule ^logout?$ config/logout.php
+RewriteRule ^404?$ views/erro.html
+
+# Regra para re-escrever url's com parametros. ex: user.php?id=?1 para user/1
+# RewriteRule ^user/([0-9]+) user.php?id=$1
+
+# Regra para re-escrever url's com 2 parametros. ex: user.php?id=?1 para user/1/2
+# RewriteRule ^user/([0-9]+)/([0-9]+) user.php?id=$1&uid=$2

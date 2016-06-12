@@ -2,7 +2,7 @@
     include("../config/config.php");
     include('../controls/Usuario.php');
     if($_SESSION['uid']){ //Valida se o usuario esta logado e tenta acessar a pagina de login.
-        header("Location: dashboard.php"); // Page redirecting to home.php 
+        header("Location: dashboard"); // Page redirecting to home.php 
     }
     $usuario = new Usuario();
 
@@ -15,7 +15,7 @@
     if(strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 ) {
         $uid=$usuario->userLogin($usernameEmail,$password);
             if($uid){
-                header("Location: dashboard.php"); // Page redirecting to home.php 
+                header("Location: dashboard"); // Page redirecting to home.php 
             }else {
                 $errorMsgLogin="Usuario ou Senha Incorretos.";
             }

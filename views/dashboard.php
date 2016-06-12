@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Painel Administrativo - ACDN</title>
@@ -15,7 +15,7 @@
 ?>
 
 <h1>Welcome <?php echo $userDetails->name; ?></h1>
-<a href="../config/logout.php"><button>Sair</button></a>
+<a href="logout"><button>Sair</button></a>
 
 
 

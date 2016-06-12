@@ -3,7 +3,7 @@
 	$session_uid='';
 	$_SESSION['uid']=''; 
 	if(empty($session_uid) && empty($_SESSION['uid'])){
-		header("Location: ../index.php");
+		header("Location: home");
 		//echo "<script>window.location='$url'</script>";
 	}
 

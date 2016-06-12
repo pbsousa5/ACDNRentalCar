@@ -6,6 +6,6 @@ if(!empty($_SESSION['uid'])){
 }
 
 if(empty($session_uid)){
-	header("Location: /projeto/erro.html");
+	header("Location: 404");
 }
 ?>
