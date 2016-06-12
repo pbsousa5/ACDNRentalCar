@@ -7,7 +7,6 @@
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/pricing.css"> <!-- Resource style -->
 
 
     <!-- Custom Fonts -->

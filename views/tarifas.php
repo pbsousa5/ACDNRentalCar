@@ -1,3 +1,4 @@
+    <link rel="stylesheet" href="css/pricing.css"> <!-- Resource style -->
     <!-- Tarifas Section -->
     <section class="success" id="about">
             <section id="pricePlans">

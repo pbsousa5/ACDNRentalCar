@@ -18,3 +18,11 @@ section{
 #painelLoc{
 	cursor: pointer;
 }
+
+#opcoes{
+	width: 20%;
+}
+
+.btnAlterar{
+	margin: 5px;
+}

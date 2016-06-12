@@ -7,6 +7,3 @@
 <!-- Plugin JavaScript -->
 <!-- Plugin responsavel pela animacao de scroll ao clicar em alguma opcao do header -->
 <script src="js/jquery.easing.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="js/freelancer.js"></script>

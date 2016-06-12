@@ -117,6 +117,8 @@
     </div> 
 
     <?php include('views/section_js.php') ?>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
 
 </body>
 

@@ -31,48 +31,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-<style type="text/css">
-    #login{
-    width: 20%; border: 1px solid #d6d7da; 
-    padding: 0px 15px 15px 15px; 
-    border-radius: 5px;font-family: arial; 
-    line-height: 16px;color: #333333; font-size: 14px; 
-    background: #ffffff;rgba(200,200,200,0.7) 0 4px 10px -1px;
-    margin: 0 auto;
-    }
-    h3{color:#365D98}
-    form label{font-weight: bold;}
-    form label, form input{display: block;margin-bottom: 5px;width: 90%}
-    form input{ 
-    border: solid 1px #666666;padding: 10px;
-    border: solid 1px #BDC7D8; margin-bottom: 20px
-    }
-    .button {
-    background-color: #0027FF ;
-    border-color: navy;
-    font-weight: bold;
-    padding: 12px 15px;
-    max-width: 100px;
-    color: #ffffff;
-    margin: 0 auto;
-    }
-    .errorMsg{color: #cc0000;margin-bottom: 10px}
-</style>
+    <title>ACDN - Acesso Administrativo</title>
+    <?php include('section_css.php') ?>
+    <link href="css/admin-theme/metisMenu.min.css" rel="stylesheet">
+    <link href="css/admin-theme/sb-admin-2.css" rel="stylesheet">
 </head>
 <body>
 
-<div id="login">
-    <h3>Login</h3>
-    <form method="post" action="" name="login">
-        <label>Usuario ou Email</label>
-        <input type="text" name="usernameEmail" autocomplete="off" />
-        <label>Senha</label>
-        <input type="password" name="password" autocomplete="off"/>
-        <div class="errorMsg"><?php echo $errorMsgLogin; ?></div>
-        <input type="submit" class="button" name="loginSubmit" value="Login">
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"><span id="logoImg">&nbsp;</span> ACDN - Acesso Administrativo</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="" name="login">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Usuario ou E-mail" name="usernameEmail" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Senha" name="password" type="password">
+                            </div>
+                            <div class="errorMsg" style="color: red; margin-bottom: 10px;S"><?php echo $errorMsgLogin; ?></div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <input type="submit" class="btn btn-lg btn-success btn-block button" name="loginSubmit" value="Login">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 </body>
 </html>
+
+<?php include('section_js.php') ?>
+<script src="js/admin-theme/metisMenu.min.js"></script>
+<script src="js/admin-theme/sb-admin-2.js"></script>
