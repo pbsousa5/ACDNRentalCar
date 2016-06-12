@@ -1,0 +1,20 @@
+a{
+	color: black;
+}
+
+a.active{
+	color: #1A668C;
+}
+
+.topDashboard{
+	border-color: #e7e7e7 !important; 
+	border-bottom: 1px solid;
+}
+
+section{
+	padding: 0px;
+}
+
+#painelLoc{
+	cursor: pointer;
+}

@@ -1,3 +1,6 @@
+
+<!--     CSS GENERICO A TODOS AS VIEWS -->
+
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
