@@ -18,7 +18,9 @@
     <input type="email" class="form-control" id="locEmail" placeholder="Email" name="email" required>
     <small class="text-muted">Ex: meunome@mail.com</small>
   </fieldset>
-  <button type="submit" id="btnCadastrar" class="btn btn-primary">Cadastrar</button>
+  <div id="areaBtns">
+    <button type="submit" id="btnCadastrar" class="btn btn-primary">Cadastrar</button>    
+  </div>
 </form>
 
 <script type="text/javascript">
@@ -29,8 +31,6 @@
 
         formData.push({name: 'type', value: 'post'});
 
-        console.log(formData);
-
         $.ajax({
               url: "controls/Locadora.php",
               type: "post",
@@ -38,12 +38,14 @@
               dateType: "json",
               success: function (response) {
                 alert(response); 
-                location.reload();        
+                $('#painelLoc').click();       
               },
               error: function(jqXHR, textStatus, errorThrown) {
                  alert(textStatus, errorThrown);
               }
           });
+    //Necessario "matar o evento de click, para que no proximo load, multiplos eventos nao sejam disparados"
+    $(this).die('click'); 
   });
 
 </script>
