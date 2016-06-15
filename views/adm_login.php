@@ -33,8 +33,8 @@
 <head>
     <title>ACDN - Acesso Administrativo</title>
     <?php include('section_css.php') ?>
-    <link href="css/admin-theme/metisMenu.min.css" rel="stylesheet">
-    <link href="css/admin-theme/sb-admin-2.css" rel="stylesheet">
+    <link href="../css/admin-theme/metisMenu.min.css" rel="stylesheet">
+    <link href="../css/admin-theme/sb-admin-2.css" rel="stylesheet">
 </head>
 <body>
 
@@ -70,5 +70,5 @@
 </html>
 
 <?php include('section_js.php') ?>
-<script src="js/admin-theme/metisMenu.min.js"></script>
-<script src="js/admin-theme/sb-admin-2.js"></script>
+<script src="../js/admin-theme/metisMenu.min.js"></script>
+<script src="../js/admin-theme/sb-admin-2.js"></script>
