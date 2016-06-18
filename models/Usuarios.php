@@ -1,5 +1,5 @@
 <?php
-class Usuario{
+class Usuarios{
 /* User Login */
 public function userLogin($usernameEmail,$password)
 {

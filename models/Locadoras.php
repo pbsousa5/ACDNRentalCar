@@ -1,8 +1,11 @@
+<?php include($_SERVER['DOCUMENT_ROOT'].'/ACDNRentalCar/config/path.php') // Para facilitar Includes ?>
+
+
 <?php
 
-include('../config/config.php');
+include($root . '/config/config.php');
 
-class Locadora{
+class Locadoras{
 
 
 public function getLocadoras(){
@@ -48,10 +51,10 @@ public function insertLocadora($formData){
 		$telefone = $formData['telefone'];
 		$email = $formData['email'];
 
-		Locadora::validate($nome);
-		Locadora::validate($endereco);
-		Locadora::validate($telefone);
-		Locadora::validate($email);
+		Locadoras::validate($nome);
+		Locadoras::validate($endereco);
+		Locadoras::validate($telefone);
+		Locadoras::validate($email);
 
 		$db = getDB();
 		$query = 'INSERT INTO Locadora (nome,endereco,telefone,email) VALUES(:nome, :endereco, :telefone, :email)';
@@ -115,29 +118,3 @@ public function updateLocadora($formData,$loc_id){
 
 	}
 }
-
-$loc = new Locadora();
-
-if($_SERVER['REQUEST_METHOD']=="POST"){
-	if($_POST['type'] == 'get'){
-		$loc->getLocadoras();
-	}
-	if($_POST['type'] == 'getLocadora'){
-		$loc_id = $_POST['loc_id'];
-		$loc->getLocadoraPorId($loc_id	);
-	}
-	if($_POST['type'] == 'post'){
-		$formData = $_POST;
-		$loc->insertLocadora($formData);
-	}
-	if($_POST['type'] == 'delete'){
-		$loc_id = $_POST['loc_id'];
-		$loc->deleteLocadora($loc_id);
-	}
-	if($_POST['type'] == 'put'){
-		$formData = $_POST;
-		$loc_id = $_POST['loc_id'];
-		$loc->updateLocadora($formData,$loc_id);
-	}
-}
-

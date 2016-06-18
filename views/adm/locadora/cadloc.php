@@ -32,7 +32,7 @@
         formData.push({name: 'type', value: 'post'});
 
         $.ajax({
-              url: "controls/Locadora.php",
+              url: "controls/LocadoraControl.php",
               type: "post",
               data: formData,
               dateType: "json",

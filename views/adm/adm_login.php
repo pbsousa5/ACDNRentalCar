@@ -1,29 +1,8 @@
 <?php
     include($_SERVER['DOCUMENT_ROOT'].'/ACDNRentalCar/config/path.php'); // Para facilitar Includes 
+
     include($root . '/config/config.php');
-    include($root . '/controls/Usuario.php');
-    if($_SESSION['uid']){ //Valida se o usuario esta logado e tenta acessar a pagina de login.
-        header("Location: dashboard"); // Page redirecting to home.php 
-    }
-    $usuario = new Usuario();
-
-    $errorMsgReg='';
-    $errorMsgLogin='';
-    /* Login Form */
-    if (!empty($_POST['loginSubmit'])){
-        $usernameEmail=$_POST['usernameEmail'];
-        $password=$_POST['password'];
-    if(strlen(trim($usernameEmail))>1 && strlen(trim($password))>1 ) {
-        $uid=$usuario->userLogin($usernameEmail,$password);
-            if($uid){
-                header("Location: dashboard"); // Page redirecting to home.php 
-            }else {
-                $errorMsgLogin="Usuario ou Senha Incorretos.";
-            }
-        }
-    }
-
-    /*CADASTRAR SENHA COM BASE EM ENCRIPTACAO HASH256 como por exemplo: http://www.xorbin.com/tools/sha256-hash-calculator*/
+    include($root . '/controls/UsuarioControl.php');
 
 ?>
 
@@ -33,7 +12,7 @@
 <html>
 <head>
     <title>ACDN - Acesso Administrativo</title>
-    <?php include('../section_css.php') ?>
+    <?php include($root . '/views/section_css.php') ?>
     <link href="css/admin-theme/metisMenu.min.css" rel="stylesheet">
     <link href="css/admin-theme/sb-admin-2.css" rel="stylesheet">
 </head>
@@ -70,6 +49,6 @@
 </body>
 </html>
 
-<?php include('../section_js.php') ?>
+<?php include($root . '/views/section_js.php') ?>
 <script src="js/admin-theme/metisMenu.min.js"></script>
 <script src="js/admin-theme/sb-admin-2.js"></script>

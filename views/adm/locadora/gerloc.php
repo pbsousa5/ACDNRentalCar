@@ -17,7 +17,7 @@ data = [];
 data.push({name: 'type', value: 'get'});
 
 $.ajax({
-	url: "controls/Locadora.php",
+	url: "controls/LocadoraControl.php",
 	type: "post",
 	data: data,
 	dateType: "json",
@@ -47,7 +47,7 @@ $(document.body).on("click", ".btnDeletar", function(e){
 		data.push({name: 'loc_id',value: id});
 		data.push({name: 'type', value: 'delete'});
 		$.ajax({
-			url: "controls/Locadora.php",
+			url: "controls/LocadoraControl.php",
 			type: "post",
 			data: data,
 			dateType: "json",
@@ -70,7 +70,7 @@ $(document.body).on("click", ".btnAlterar", function(e){
 	data.push({name: 'loc_id',value: id});
 	data.push({name: 'type', value: 'getLocadora'});
 	$.ajax({
-		url: "controls/Locadora.php",
+		url: "controls/LocadoraControl.php",
 		type: "post",
 		data: data,
 		dateType: "json",
@@ -103,7 +103,7 @@ $(document.body).on("click", "#btnUpdate", function(e){
     formData.push({name: 'type', value: 'put'});
 
 	$.ajax({
-		url: "controls/Locadora.php",
+		url: "controls/LocadoraControl.php",
 		type: "post",
 		data: formData,
 		dateType: "json",
