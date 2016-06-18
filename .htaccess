@@ -4,8 +4,8 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
 RewriteRule ^home?$ index.php
-RewriteRule ^adm?$ views/adm_login.php
-RewriteRule ^dashboard?$ views/dashboard.php
+RewriteRule ^adm?$ views/adm/adm_login.php
+RewriteRule ^dashboard?$ views/adm/dashboard.php
 RewriteRule ^logout?$ config/logout.php
 RewriteRule ^404?$ views/erro.html
 

@@ -44,7 +44,7 @@
                  alert(textStatus, errorThrown);
               }
           });
-    //Necessario "matar o evento de click, para que no proximo load, multiplos eventos nao sejam disparados"
+    /*Necessario "matar o evento de click, para que no proximo load, multiplos eventos nao sejam disparados"*/
     $(this).die('click'); 
   });
 

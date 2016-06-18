@@ -1,6 +1,7 @@
 <?php
-    include("../config/config.php");
-    include('../controls/Usuario.php');
+    include($_SERVER['DOCUMENT_ROOT'].'/ACDNRentalCar/config/path.php'); // Para facilitar Includes 
+    include($root . '/config/config.php');
+    include($root . '/controls/Usuario.php');
     if($_SESSION['uid']){ //Valida se o usuario esta logado e tenta acessar a pagina de login.
         header("Location: dashboard"); // Page redirecting to home.php 
     }
@@ -32,9 +33,9 @@
 <html>
 <head>
     <title>ACDN - Acesso Administrativo</title>
-    <?php include('section_css.php') ?>
-    <link href="../css/admin-theme/metisMenu.min.css" rel="stylesheet">
-    <link href="../css/admin-theme/sb-admin-2.css" rel="stylesheet">
+    <?php include('../section_css.php') ?>
+    <link href="css/admin-theme/metisMenu.min.css" rel="stylesheet">
+    <link href="css/admin-theme/sb-admin-2.css" rel="stylesheet">
 </head>
 <body>
 
@@ -69,6 +70,6 @@
 </body>
 </html>
 
-<?php include('section_js.php') ?>
-<script src="../js/admin-theme/metisMenu.min.js"></script>
-<script src="../js/admin-theme/sb-admin-2.js"></script>
+<?php include('../section_js.php') ?>
+<script src="js/admin-theme/metisMenu.min.js"></script>
+<script src="js/admin-theme/sb-admin-2.js"></script>

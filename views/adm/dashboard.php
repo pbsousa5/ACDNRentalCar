@@ -1,3 +1,5 @@
+<?php include($_SERVER['DOCUMENT_ROOT'].'/ACDNRentalCar/config/path.php') // Para facilitar Includes ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="imgs/favicon.png">
 	<title>Painel Administrativo - ACDN</title>
-<?php include('section_css.php') ?>
+<?php include($root .'/views/section_css.php') ?>
     <link href="css/dashboard.css" rel="stylesheet">
  	<link href="css/admin-theme/metisMenu.min.css" rel="stylesheet">
     <link href="css/admin-theme/timeline.css" rel="stylesheet">
@@ -16,15 +18,15 @@
 
 <?php
 
-	include('../config/config.php');
-	include('../config/session.php');
+	include($root . '/config/config.php');
+	include($root . '/config/session.php');
 	$user=$usuario->userDetails($session_uid);
 
 ?>
 
 <section id="painel">
   <div id="wrapper">
-  		<?php include('adm/menu.php') ?>
+  		<?php include('menu.php') ?>
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
@@ -45,7 +47,7 @@
 
 
 
-<?php include('section_js.php') ?>
+<?php include($root .'/views/section_js.php') ?>
 <script src="js/admin-theme/metisMenu.min.js"></script>
 <script src="js/admin-theme/raphael-min.js"></script>
 <script src="js/admin-theme/sb-admin-2.js"></script>
@@ -58,8 +60,8 @@
 <script type="text/javascript">
 	$('#painelLoc').click(function(){
         $('.page-header').text('Painel de Controle - Locadora');
-        $('#content').load('views/adm/cadloc.php');
-        $('#grid').load('views/adm/gerloc.php');
+        $('#content').load('views/adm/locadora/cadloc.php');
+        $('#grid').load('views/adm/locadora/gerloc.php');
 	})
 </script>
 
