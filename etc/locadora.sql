@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 18, 2016 at 11:45 AM
+-- Generation Time: Jun 21, 2016 at 10:07 PM
 -- Server version: 5.5.44-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.16
 
@@ -45,15 +45,16 @@ CREATE TABLE IF NOT EXISTS `Carro` (
 CREATE TABLE IF NOT EXISTS `Cliente` (
   `cli_id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `endereco` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `sobrenome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `endereco` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
   `aniversario` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `doc_habilitacao` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `doc_habilitacao` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `foto_perfil` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`cli_id`),
-  UNIQUE KEY `doc_habilitacao_UNIQUE` (`doc_habilitacao`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `doc_habilitacao_UNIQUE` (`doc_habilitacao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -89,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `Locadora` (
   `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`loc_id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `Locadora`
@@ -99,7 +100,8 @@ INSERT INTO `Locadora` (`loc_id`, `nome`, `endereco`, `telefone`, `email`) VALUE
 (1, 'Matriz', 'Av 20, Numero 36, Bairro: Pinhal', '123513', 'mail@mail.com'),
 (13, 'ACDN - Centro', 'Rua do Sol, N 36, Bairro: Pinhal', '134552', 'centro@acdn.com'),
 (14, 'ACDN - Interior', 'Rua do Interior, N 200, Bairro Algu', '990129812', 'interior@acdn.com'),
-(15, 'ACDN - Internacional', '56th st, Manhattan, NY', '982727180', 'international-us@acdn.com');
+(15, 'ACDN - Internacional', '56th st, Manhattan, NY', '982727180', 'international-us@acdn.com'),
+(16, 'ACDN - Filial', 'Rua Tal, avenida 4, Bairro: Vinhais', '9093108301', 'filial@acdn.com');
 
 -- --------------------------------------------------------
 

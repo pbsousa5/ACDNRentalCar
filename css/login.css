@@ -1,0 +1,18 @@
+#cadModal{
+	font-family: 'Raleway', sans-serif;
+}
+
+.formCadNiver,
+.formCadEmail,
+.formCadSenha{
+	margin-top: 10px;
+}
+
+.modal-dialog{
+    position: relative;
+    display: table; //This is important 
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: auto;
+    min-width: 300px;   
+}

@@ -13,6 +13,7 @@
     <title>ACDN - Rental Cars</title>
 
     <?php include('views/section_css.php') ?>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 
 <body id="page-top" class="index">
@@ -54,6 +55,9 @@
                     <li class="page-scroll">
                         <a href="#contact">Sobre</a>
                     </li>
+                    <li class="page-scroll">
+                        <a id="btnCadCliente"><span class="blue">Criar conta</span></a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,10 +93,10 @@
                                 <label for="data de devolucao">Data da Devolução</label>
                                 <input type="date" name="dataDevolução" class="dataDevolucao form-control" id="dataDevolução">
                             </div>
-                            <button type="submit" class="btn btn-lg btn-warning btnReservar"><strong>Alugar</strong></button>
+                            <button type="button" id="btnAlugar" class="btn btn-lg btn-warning btnReservar"><strong>Alugar</strong></button>
                         </form>
                     </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-md-8 col-sm-12 col-xs-12 hidden-sm hidden-xs">
                         <div class="intro-text">
                             <h2 class="tituloMain">Planeje sua próxima experiência<h2>
                             <h2><small class="subtitle">Qualidade + Sem Taxas de Cancelamento = Satisfação do Cliente</small></h2>
@@ -117,8 +121,22 @@
     </div> 
 
     <?php include('views/section_js.php') ?>
+    <?php include('views/cliente/signUp.php') ?>
+    <?php include('views/cliente/modalLogin.php') ?>
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+
+    <script type="text/javascript">
+    $('#btnCadCliente').click(function(){
+        $('#cadModal').modal('show');
+    });
+
+    $('#btnAlugar').click(function(){
+        $('#loginModal').modal('show');
+    });
+
+
+    </script>
 
 </body>
 

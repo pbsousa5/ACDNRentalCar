@@ -20,6 +20,7 @@
 
 	include($root . '/config/config.php');
 	include($root . '/config/session.php');
+    
 	$user=$usuario->userDetails($session_uid);
 
 ?>

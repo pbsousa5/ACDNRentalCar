@@ -145,3 +145,11 @@ ul{
 .btnReservar{
 	float: right;
 }
+
+#btnCadCliente{
+	cursor: pointer;
+}
+
+.blue{
+	color: #467298;
+}
