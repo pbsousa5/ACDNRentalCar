@@ -98,7 +98,7 @@
                     </div>
                     <div class="col-md-8 col-sm-12 col-xs-12 hidden-sm hidden-xs">
                         <div class="intro-text">
-                            <h2 class="tituloMain">Planeje sua próxima experiência<h2>
+                            <h2 class="tituloMain">Reserve sua próxima experiência<h2>
                             <h2><small class="subtitle">Qualidade + Sem Taxas de Cancelamento = Satisfação do Cliente</small></h2>
                         </div>
                     </div>
@@ -134,6 +134,10 @@
     $('#btnAlugar').click(function(){
         $('#loginModal').modal('show');
     });
+
+    $('#cadModal').on('hidden.bs.modal', function () {
+        $('#cadCli').trigger("reset");
+    })
 
 
     </script>

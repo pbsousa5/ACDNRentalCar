@@ -16,3 +16,14 @@
     width: auto;
     min-width: 300px;   
 }
+
+.parsley-type,
+.parsley-required{
+	color: red;
+}
+
+.parsley-errors-list,
+.filled{
+	padding-left: 5px;
+	margin-top: 2px;
+}
