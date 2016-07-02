@@ -123,8 +123,8 @@
                                 <li id="painelLoc">
                                     <a>Gerenciar</a>
                                 </li>
-                                <li>
-                                    <a href="morris.html">Visão Geral</a>
+                                <li id="viewLoc">
+                                    <a href="#">Visão Geral</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -132,11 +132,11 @@
                         <li>
                             <a href="#"><i class="fa fa-car fa-fw"></i> Veiculos<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Gerenciar</a>
+                                <li id="painelCar">
+                                    <a href="#">Gerenciar</a>
                                 </li>
-                                <li>
-                                    <a href="morris.html">Visão Geral</a>
+                                <li id="viewCar">
+                                    <a href="#">Visão Geral</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

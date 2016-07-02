@@ -34,11 +34,15 @@
                     <h1 class="page-header">Painel de Controle</h1>
                 </div>
                 <!-- /.col-lg-12 -->
+           
                 <div id="content" class="col-md-5">
 
                 </div>
                 <div id="grid" class="col-md-7">
                     
+                </div>
+                <div id="body" class="col-md-12">
+
                 </div>
             </div>
         <!-- /#page-wrapper -->
@@ -63,6 +67,29 @@
         $('.page-header').text('Painel de Controle - Locadora');
         $('#content').load('views/adm/locadora/cadloc.php');
         $('#grid').load('views/adm/locadora/gerloc.php');
+        $('#body').html('');
 	})
+
+    $('#painelCar').click(function(){
+        $('.page-header').text('Painel de Controle - Carros');
+        $('#content').load('views/adm/carro/cadcar.php');
+        $('#grid').load('views/adm/carro/gercar.php');
+        $('#body').html('');
+    })
+
+    $('#viewCar').click(function(){
+        $('.page-header').text('Painel de Controle - Carros');
+        $('#body').load('views/adm/carro/viewcar.php');
+        $('#content').html('');
+        $('#grid').html('');
+    })
+
+    $('#viewLoc').click(function(){
+        $('.page-header').text('Painel de Controle - Locadora');
+        $('#body').load('views/adm/locadora/viewloc.php');
+        $('#content').html('');
+        $('#grid').html('');
+    })
+
 </script>
 
