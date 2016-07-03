@@ -18,7 +18,7 @@
 <script type="text/javascript">
 
 data = [];
-data.push({name: 'type', value: 'get'});
+data.push({name: 'type', value: 'getCarro'});
 
 $.ajax({
 	url: "controls/CarroControl.php",

@@ -25,17 +25,17 @@
     <input type="text" class="form-control" id="carCor" placeholder="Cor do carro" name="cor" required>
   </fieldset>
   <div id="areaBtns">
-    <button type="submit" id="btnCadastrar" class="btn btn-primary">Cadastrar</button>    
+    <button type="submit" id="btnCadastrarCarro" class="btn btn-primary">Cadastrar</button>    
   </div>
 </form>
 
 <script type="text/javascript">
-    $('#btnCadastrar').click(function(e){
+    $('#btnCadastrarCarro').click(function(e){
         e.preventDefault();
         var form = $('#cadCar');
         var formData = form.serializeArray();
 
-        formData.push({name: 'type', value: 'post'});
+        formData.push({name: 'type', value: 'postCarro'});
 
         $.ajax({
               url: "controls/CarroControl.php",
