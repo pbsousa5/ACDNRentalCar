@@ -8,17 +8,17 @@ include($root . '/config/config.php');
 class Clientes{
 
 
-/*public function getLocadoras(){
+public function getCliente(){
 	try{
 		$db = getDB();
-		$stmt = $db->prepare("SELECT * FROM Locadora"); 
+		$stmt = $db->prepare("SELECT * FROM Cliente"); 
 		$stmt->execute();
 		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
 		echo json_encode($data);
-		}catch(PDOException $e) {
-			echo '{"error":{"text":'. $e->getMessage() .'}}';
-		}
-	}*/
+	}catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}';
+	}
+}
 
 /*public function getLocadoraPorId($loc_id){
 	try{

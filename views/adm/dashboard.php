@@ -85,8 +85,15 @@
     })
 
     $('#viewLoc').click(function(){
-        $('.page-header').text('Painel de Controle - Locadora');
+        $('.page-header').text('Painel de Controle - Locadoras');
         $('#body').load('views/adm/locadora/viewloc.php');
+        $('#content').html('');
+        $('#grid').html('');
+    })
+
+    $('#viewCli').click(function(){
+        $('.page-header').text('Painel de Controle - Clientes');
+        $('#body').load('views/adm/cliente/viewcli.php');
         $('#content').html('');
         $('#grid').html('');
     })

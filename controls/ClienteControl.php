@@ -11,6 +11,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		$formData = $_POST;
 		$cli->insertCliente($formData);
 	}
+
+	if($_POST['type'] == 'getCliente'){
+		$cli->getCliente();
+	}
 }
 
 
