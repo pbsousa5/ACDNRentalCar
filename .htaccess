@@ -7,7 +7,9 @@ RewriteRule ^home?$ index.php
 RewriteRule ^adm?$ views/adm/adm_login.php
 RewriteRule ^dashboard?$ views/adm/dashboard.php
 RewriteRule ^logout?$ config/logout.php
+RewriteRule ^logoutCli?$ config/logoutCli.php
 RewriteRule ^404?$ views/erro.html
+RewriteRule ^reservas?$ views/cliente/reservas.php
 
 # Regra para re-escrever url's com parametros. ex: user.php?id=?1 para user/1
 # RewriteRule ^user/([0-9]+) user.php?id=$1

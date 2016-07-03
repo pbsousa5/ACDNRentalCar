@@ -146,10 +146,15 @@ ul{
 	float: right;
 }
 
-#btnCadCliente{
+#btnCadCliente,
+#btnAcessoCli{
 	cursor: pointer;
 }
 
 .blue{
 	color: #467298;
+}
+
+.red{
+	color: #ED0000;
 }

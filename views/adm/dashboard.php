@@ -63,6 +63,14 @@
 </html>
 
 <script type="text/javascript">
+
+    $('.option').on('click',function(){
+        $('.option').removeClass('active');
+        $('a').removeClass('active');
+        $(this).addClass("active");
+    });
+
+
 	$('#painelLoc').click(function(){
         $('.page-header').text('Painel de Controle - Locadora');
         $('#content').load('views/adm/locadora/cadloc.php');
@@ -78,21 +86,21 @@
     })
 
     $('#viewCar').click(function(){
-        $('.page-header').text('Painel de Controle - Carros');
+        $('.page-header').text('Visão Geral - Carros');
         $('#body').load('views/adm/carro/viewcar.php');
         $('#content').html('');
         $('#grid').html('');
     })
 
     $('#viewLoc').click(function(){
-        $('.page-header').text('Painel de Controle - Locadoras');
+        $('.page-header').text('Visão Geral - Locadoras');
         $('#body').load('views/adm/locadora/viewloc.php');
         $('#content').html('');
         $('#grid').html('');
     })
 
     $('#viewCli').click(function(){
-        $('.page-header').text('Painel de Controle - Clientes');
+        $('.page-header').text('Visão Geral - Clientes');
         $('#body').load('views/adm/cliente/viewcli.php');
         $('#content').html('');
         $('#grid').html('');

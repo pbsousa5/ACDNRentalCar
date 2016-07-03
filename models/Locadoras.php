@@ -11,7 +11,7 @@ class Locadoras{
 public function getLocadoras(){
 	try{
 		$db = getDB();
-		$stmt = $db->prepare("SELECT * FROM Locadora"); 
+		$stmt = $db->prepare("SELECT * FROM locadora"); 
 		$stmt->execute();
 		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
 		echo json_encode($data);
@@ -23,7 +23,7 @@ public function getLocadoras(){
 public function getLocadoraPorId($loc_id){
 	try{
 		$db = getDB();
-		$query = "SELECT * FROM Locadora WHERE loc_id = :loc_id";
+		$query = "SELECT * FROM locadora WHERE loc_id = :loc_id";
 		$query_prep = $db->prepare($query);
 		$query_prep->bindParam(':loc_id', $loc_id, PDO::PARAM_INT); 
 		$query_prep->execute();
@@ -57,7 +57,7 @@ public function insertLocadora($formData){
 		Locadoras::validate($email);
 
 		$db = getDB();
-		$query = 'INSERT INTO Locadora (nome,endereco,telefone,email) VALUES(:nome, :endereco, :telefone, :email)';
+		$query = 'INSERT INTO locadora (nome,endereco,telefone,email) VALUES(:nome, :endereco, :telefone, :email)';
 		$query_prep = $db->prepare($query);
 		$data = ['nome'=>$nome,'endereco'=>$endereco,'telefone'=>$telefone,'email'=>$email];
 		$result = $query_prep->execute($data);
@@ -78,7 +78,7 @@ public function insertLocadora($formData){
 public function deleteLocadora($loc_id){
 	try{
 		$db = getDB();
-		$query = "DELETE FROM Locadora WHERE loc_id = :loc_id";
+		$query = "DELETE FROM locadora WHERE loc_id = :loc_id";
 		$query_prep = $db->prepare($query);
 		$query_prep->bindParam(':loc_id', $loc_id, PDO::PARAM_INT); 
 		$query_prep->execute();
@@ -97,7 +97,7 @@ public function updateLocadora($formData,$loc_id){
 		$email = $formData['email'];
 		$db = getDB();
 
-		$query = "UPDATE Locadora 
+		$query = "UPDATE locadora 
 				  SET nome = :nome,
 				  endereco = :endereco,
 				  telefone = :telefone, 

@@ -11,7 +11,7 @@ class Carros{
 public function getCarros(){
 	try{
 		$db = getDB();
-		$stmt = $db->prepare("SELECT * FROM Carro"); 
+		$stmt = $db->prepare("SELECT * FROM carro"); 
 		$stmt->execute();
 		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
 		echo json_encode($data);
@@ -23,7 +23,7 @@ public function getCarros(){
 public function getCarroPorId($car_id){
 	try{
 		$db = getDB();
-		$query = "SELECT * FROM Carro WHERE car_id = :car_id";
+		$query = "SELECT * FROM carro WHERE car_id = :car_id";
 		$query_prep = $db->prepare($query);
 		$query_prep->bindParam(':car_id', $car_id, PDO::PARAM_INT); 
 		$query_prep->execute();
@@ -61,7 +61,7 @@ public function insertCarro($formData){
 		Carros::validate($cor);
 
 		$db = getDB();
-		$query = 'INSERT INTO Carro (chassi,placa,cor,modelo, marca, ano) VALUES(:chassi, :placa, :cor, :modelo, :marca, :ano)';
+		$query = 'INSERT INTO carro (chassi,placa,cor,modelo, marca, ano) VALUES(:chassi, :placa, :cor, :modelo, :marca, :ano)';
 		$query_prep = $db->prepare($query);
 		$data = ['chassi'=>$chassi,'placa'=>$placa,'cor'=>$cor,'modelo'=>$modelo,'marca'=>$marca,'ano'=>$ano];
 		$result = $query_prep->execute($data);
@@ -82,7 +82,7 @@ public function insertCarro($formData){
 public function deleteCarro($car_id){
 	try{
 		$db = getDB();
-		$query = "DELETE FROM Carro WHERE car_id = :car_id";
+		$query = "DELETE FROM carro WHERE car_id = :car_id";
 		$query_prep = $db->prepare($query);
 		$query_prep->bindParam(':car_id', $car_id, PDO::PARAM_INT); 
 		$query_prep->execute();
@@ -103,7 +103,7 @@ public function updateCarro($formData,$car_id){
 		$cor = $formData['cor'];
 		$db = getDB();
 
-		$query = "UPDATE Carro 
+		$query = "UPDATE carro 
 				  SET chassi = :chassi,
 				  placa = :placa,
 				  cor = :cor, 

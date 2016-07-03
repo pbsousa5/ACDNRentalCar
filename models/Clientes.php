@@ -11,7 +11,7 @@ class Clientes{
 public function getCliente(){
 	try{
 		$db = getDB();
-		$stmt = $db->prepare("SELECT * FROM Cliente"); 
+		$stmt = $db->prepare("SELECT * FROM cliente"); 
 		$stmt->execute();
 		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
 		echo json_encode($data);
@@ -20,19 +20,58 @@ public function getCliente(){
 	}
 }
 
-/*public function getLocadoraPorId($loc_id){
-	try{
+public function loginCliente($data)
+{
+try{
+
+		$email = $data['email'];
+		$senha = $data['senha'];
+
 		$db = getDB();
-		$query = "SELECT * FROM Locadora WHERE loc_id = :loc_id";
-		$query_prep = $db->prepare($query);
-		$query_prep->bindParam(':loc_id', $loc_id, PDO::PARAM_INT); 
-		$query_prep->execute();
-		$data = $query_prep->fetchAll(PDO::FETCH_OBJ); //User data
-		echo json_encode($data);
-		}catch(PDOException $e) {
-			echo '{"error":{"text":'. $e->getMessage() .'}}';
-		}
-	}*/
+		$stmt = $db->prepare("SELECT cli_id FROM cliente WHERE email=:email AND senha=:senha"); 
+		$stmt->bindParam("email", $email,PDO::PARAM_STR) ;
+		$stmt->bindParam("senha", $senha,PDO::PARAM_STR) ;
+		$stmt->execute();
+		$count=$stmt->rowCount();
+		$data=$stmt->fetch(PDO::FETCH_OBJ);
+		$db = null;
+		if($count){
+			$_SESSION['cli_id']=$data->cli_id; // Storing user session value
+			return true;
+		}else{
+			return false;
+		} 
+	}
+	catch(PDOException $e) {
+	echo '{"error":{"text":'. $e->getMessage() .'}}';
+	}
+
+}
+
+public function getDadosCliente($cli_id)
+{
+try{
+		$db = getDB();
+		$stmt = $db->prepare("SELECT * FROM cliente WHERE cli_id=:cli_id"); 
+		$stmt->bindParam("cli_id", $cli_id,PDO::PARAM_STR);
+		$stmt->execute();
+		$count=$stmt->rowCount();
+		$data=$stmt->fetch(PDO::FETCH_OBJ);
+		$db = null;
+		if($count){
+			echo json_encode($data);
+		}else{
+			$response = [
+				'valid' => 'false',
+			];
+			echo json_encode($response);
+		} 
+	}
+		catch(PDOException $e) {
+		echo '{"error":{"text":'. $e->getMessage() .'}}';
+	}
+}
+
 
 
 public static function validate($campo){
@@ -58,7 +97,7 @@ public function insertCliente($formData){
 		}
 
 		$db = getDB();
-		$query = 'INSERT INTO Cliente (nome,sobrenome,aniversario,email,senha) VALUES(:nome,:sobrenome,:aniversario,:email,:senha)';
+		$query = 'INSERT INTO cliente (nome,sobrenome,aniversario,email,senha) VALUES(:nome,:sobrenome,:aniversario,:email,:senha)';
 		$query_prep = $db->prepare($query);
 		$data = ['nome'=>$nome,
 				'sobrenome'=>$sobrenome,
@@ -80,46 +119,4 @@ public function insertCliente($formData){
 
 	}
 
-/*public function deleteLocadora($loc_id){
-	try{
-		$db = getDB();
-		$query = "DELETE FROM Locadora WHERE loc_id = :loc_id";
-		$query_prep = $db->prepare($query);
-		$query_prep->bindParam(':loc_id', $loc_id, PDO::PARAM_INT); 
-		$query_prep->execute();
-		echo "Locadora excluida com sucesso";		
-	}catch(PDOException $e) {
-			echo '{"error":{"text":'. $e->getMessage() .'}}';
-		}
-
-	}*/
-
-/*public function updateLocadora($formData,$loc_id){
-	try{
-		$nome = $formData['nome'];
-		$endereco = $formData['endereco'];
-		$telefone = $formData['telefone'];
-		$email = $formData['email'];
-		$db = getDB();
-
-		$query = "UPDATE Locadora 
-				  SET nome = :nome,
-				  endereco = :endereco,
-				  telefone = :telefone, 
-				  email = :email 
-				  WHERE loc_id = :loc_id";
-
-		$query_prep = $db->prepare($query);
-		$query_prep->bindParam(':nome', $nome, PDO::PARAM_INT);
-		$query_prep->bindParam(':endereco', $endereco, PDO::PARAM_INT);
-		$query_prep->bindParam(':telefone', $telefone, PDO::PARAM_INT);
-		$query_prep->bindParam(':email', $email, PDO::PARAM_INT);
-		$query_prep->bindParam(':loc_id', $loc_id, PDO::PARAM_INT);
-		$query_prep->execute();
-		echo "Dados alterados com sucesso";		
-	}catch(PDOException $e) {
-			echo '{"error":{"text":'. $e->getMessage() .'}}';
-		}
-
-	}*/
 }
