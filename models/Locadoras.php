@@ -20,6 +20,18 @@ public function getLocadoras(){
 		}
 	}
 
+public function countLocadoras(){
+	try{
+		$db = getDB();
+		$stmt = $db->prepare("SELECT COUNT(loc_id) as locadoras FROM  locadora"); 
+		$stmt->execute();
+		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
+		echo json_encode($data);
+		}catch(PDOException $e) {
+			echo '{"error":{"text":'. $e->getMessage() .'}}';
+		}
+	}
+
 public function getLocadoraPorId($loc_id){
 	try{
 		$db = getDB();

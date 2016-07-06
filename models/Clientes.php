@@ -20,6 +20,18 @@ public function getCliente(){
 	}
 }
 
+public function countClientes(){
+	try{
+		$db = getDB();
+		$stmt = $db->prepare("SELECT COUNT(cli_id) as clientes FROM  cliente"); 
+		$stmt->execute();
+		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
+		echo json_encode($data);
+		}catch(PDOException $e) {
+			echo '{"error":{"text":'. $e->getMessage() .'}}';
+		}
+	}
+
 public function loginCliente($data)
 {
 try{

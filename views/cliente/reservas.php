@@ -159,6 +159,7 @@ if(empty($_SESSION['cli_id'])){
 
 
 				$('#modalAlgAtivos').modal();
+				$('.historico').html('');
 				for(var i = 0; i < response.length; i++){
 					marca = '<div class="marca">'+response[i].marca+'</div>';
 					console.log(marca);

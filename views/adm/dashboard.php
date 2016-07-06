@@ -31,15 +31,15 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Painel de Controle</h1>
+                    <h1 class="page-header">Painel de Controle - Home</h1>
                 </div>
                 <!-- /.col-lg-12 -->
            
                 <div id="content" class="col-md-5">
-
+                
                 </div>
                 <div id="grid" class="col-md-7">
-                    
+                 
                 </div>
                 <div id="body" class="col-md-12">
 
@@ -70,41 +70,105 @@
         $(this).addClass("active");
     });
 
+function countCarros(){
+    $.ajax({
+        url: "controls/CarroControl.php",
+        type: "get",
+        dateType: "json",
+        success: function (response) {  
+            response = JSON.parse(response);
+            response = response[0];
+            $('.numCarros').html(response.carros);
 
-	$('#painelLoc').click(function(){
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert(textStatus, errorThrown);
+        }
+     });    
+}
+
+function countLocadoras(){
+    $.ajax({
+        url: "controls/LocadoraControl.php",
+        type: "get",
+        dateType: "json",
+        success: function (response) {  
+            response = JSON.parse(response);
+            response = response[0];
+            $('.numLocadoras').html(response.locadoras);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert(textStatus, errorThrown);
+        }
+     });    
+}
+
+function countClientes(){
+    $.ajax({
+        url: "controls/ClienteControl.php",
+        type: "get",
+        dateType: "json",
+        success: function (response) {  
+            response = JSON.parse(response);
+            response = response[0];
+            $('.numClientes').html(response.clientes);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            alert(textStatus, errorThrown);
+        }
+     });    
+}
+
+    $('#homeDash').click(function(){
+        $('.page-header').text('Painel de Controle - Home');
+        $('#content').load('views/adm/count.html',function(){
+            countCarros();
+            countLocadoras();
+            countClientes();            
+        });
+        $('#grid').load('views/adm/progress.html');
+        $('#body').html('');
+    });
+
+    $('#homeDash').click();
+
+
+    $('#painelLoc').click(function(){
         $('.page-header').text('Painel de Controle - Locadora');
         $('#content').load('views/adm/locadora/cadloc.php');
         $('#grid').load('views/adm/locadora/gerloc.php');
         $('#body').html('');
-	})
+    });
 
     $('#painelCar').click(function(){
         $('.page-header').text('Painel de Controle - Carros');
         $('#content').load('views/adm/carro/cadcar.php');
         $('#grid').load('views/adm/carro/gercar.php');
         $('#body').html('');
-    })
+    });
 
     $('#viewCar').click(function(){
         $('.page-header').text('Visão Geral - Carros');
         $('#body').load('views/adm/carro/viewcar.php');
         $('#content').html('');
         $('#grid').html('');
-    })
+    });
 
     $('#viewLoc').click(function(){
         $('.page-header').text('Visão Geral - Locadoras');
         $('#body').load('views/adm/locadora/viewloc.php');
         $('#content').html('');
         $('#grid').html('');
-    })
+    });
 
     $('#viewCli').click(function(){
         $('.page-header').text('Visão Geral - Clientes');
         $('#body').load('views/adm/cliente/viewcli.php');
         $('#content').html('');
         $('#grid').html('');
-    })
+    });
 
 </script>
 

@@ -20,6 +20,18 @@ public function getCarros(){
 		}
 	}
 
+public function countCarros(){
+	try{
+		$db = getDB();
+		$stmt = $db->prepare("SELECT COUNT(car_id) as carros FROM  carro"); 
+		$stmt->execute();
+		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
+		echo json_encode($data);
+		}catch(PDOException $e) {
+			echo '{"error":{"text":'. $e->getMessage() .'}}';
+		}
+	}
+
 public function getCarroPorId($car_id){
 	try{
 		$db = getDB();
