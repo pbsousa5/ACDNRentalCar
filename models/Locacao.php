@@ -22,6 +22,7 @@ public function insertLocacao($data){
 		$data = ['dataInicio'=>$dataInicio,'dataFim'=>$dataFim,'cli_id'=>$cli_id,'loc_id'=>$loc_id,'car_id'=>$car_id];
 		$result = $query_prep->execute($data);
 
+
 		if($result){
 			 echo 'Carro alugado com sucesso.';
 		}else{

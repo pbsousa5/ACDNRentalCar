@@ -38,21 +38,9 @@ if(empty($_SESSION['cli_id'])){
           <a class="navbar-brand" href="#">ACDN - <span class="red">Reservas</span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-<!--           <ul class="nav navbar-nav">
-            <li class=""><a href="#">Home</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul> -->
+          <ul class="nav navbar-nav">
+            <li class="btnHistorico"><a href="#">Historico de Reservas</a></li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="logoutCli"><i class="fa fa-sign-out fa-fw"></i> Sair</a></li>
           </ul>
@@ -140,31 +128,8 @@ if(empty($_SESSION['cli_id'])){
 		    </section>
     </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Disponibilidade de Veiculos</h4>
-      </div>
-        <div class="aluguel col-sm-12">
-            <div class="form-group pull-right">
-				<div class="input-daterange col-xs-12  input-group">
-                    <input type="text" class="input-sm form-control datepicker" placeholder="Data de Retirada" id="dataInicioDisp" name="dataInicio">
-                    <span class="input-group-addon">até</span>
-                    <input type="text" class="input-sm form-control datepicker" placeholder="Data de Devolução" id="dataFimDisp" name="dataFim">                    
-                </div>
-            </div>                       
-            <div class="form-group pull-right col-sm-6">
-                <button type="submit" disabled class="btnConsultar  btn btn-success btn-lg">Consultar</button>
-            </div>
-        </div>
-      <div class="modal-footer">
-
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<?php include('modalReservas/modalDisponibilidade.php'); ?>
+<?php include('modalReservas/modalAlugueisAtivos.php'); ?>
 
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -173,28 +138,51 @@ if(empty($_SESSION['cli_id'])){
 
 <script type="text/javascript">
 
-
-
 	$('#myModal').modal();
 
-	clienteData = [];
-	cli_id = '<?php echo $_SESSION[cli_id] ?>';
+	$('.btnHistorico').on('click',function(){
+		clienteData = [];
+		cli_id = '<?php echo $_SESSION[cli_id] ?>';
 
-	clienteData.push({name:'type',value:'getLocCliente'});
-	clienteData.push({name:'cli_id',value:cli_id});
+		clienteData.push({name:'type',value:'getLocCliente'});
+		clienteData.push({name:'cli_id',value:cli_id});
 
-	$.ajax({
-		url: "controls/LocacaoControl.php",
-		type: "post",
-		data: clienteData,
-		dateType: "json",
-		success: function (response) {  
-			console.log(response);
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-		 alert(textStatus, errorThrown);
-		}
- 	});
+		$.ajax({
+			url: "controls/LocacaoControl.php",
+			type: "post",
+			data: clienteData,
+			dateType: "json",
+			success: function (response) {  
+				response = JSON.parse(response);
+				historico = response[0];
+				console.log(historico);
+
+
+				$('#modalAlgAtivos').modal();
+				for(var i = 0; i < response.length; i++){
+					marca = '<div class="marca">'+response[i].marca+'</div>';
+					console.log(marca);
+					modelo = '<div class="modelo">'+response[i].modelo+'</div>';
+					placa = '<div class="placa"><b>Placa:</b> '+response[i].placa+'</div>';
+					cor = '<div class="cor"><b>Cor:</b> '+response[i].cor+'</div>';
+
+					hisDataRetirada = '<div class="HisDataRetirada"><b>Data Retirada:</b> '+response[i].data_retirada+'</div>';
+					HisDataDevolucao = '<div class="HisDataDevolucao"><b>Data Devolução:</b> '+response[i].data_devolucao+'</div>';
+
+					hisNome = '<div class="nome"><b>Motorista:</b> '+response[i].nome+'</div>';
+					hisSobrenome = '<div class="sobrenome">'+response[i].sobrenome+'</div>';
+					divider = '<span class="divider"></span>';
+					$('.historico').append(marca+' - '+modelo+placa+cor+hisDataRetirada+HisDataDevolucao+hisNome+' '+hisSobrenome+divider);				
+				}
+
+
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+			 alert(textStatus, errorThrown);
+			}
+	 	});		
+	})
+
 
 	$('#check').hide();
 
@@ -327,9 +315,6 @@ if(empty($_SESSION['cli_id'])){
 						loc_id = '1' //Fixo Provisorio, todos os carros saem da Filial.
 						cli_id = '<?php echo $_SESSION[cli_id] ?>';
 
-						console.log(car_id);
-						console.log(cli_id);
-
 
 						data.push({name:'dataInicio',value:$('#dataInicio').val()});
 						data.push({name:'dataFim',value:$('#dataFim').val()});
@@ -337,13 +322,15 @@ if(empty($_SESSION['cli_id'])){
 						data.push({name:'car_id',value:car_id});
 						data.push({name:'cli_id',value:cli_id});
 
+						data.push({name:'type',value:'insertLocacao'});
+
 						$.ajax({
 							url: "controls/LocacaoControl.php",
 							type: "post",
 							data: data,
 							dateType: "json",
 							success: function (response) {  
-								alert(response);
+								console.log(response);
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
 							 alert(textStatus, errorThrown);

@@ -8,7 +8,7 @@ $loc = new Locacao();
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
-	if($_POST['type'] == 'getCarro'){
+	if($_POST['type'] == 'insertLocacao'){
 		$data = $_POST;
 		$loc->insertLocacao($data);
 	}
