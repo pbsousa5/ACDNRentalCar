@@ -7,8 +7,13 @@ include($root . '/models/Carros.php');
 $car = new Carros();
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
+
 	if($_POST['type'] == 'getCarro'){
 		$car->getCarros();
+	}
+	if($_POST['type'] == 'getCarrosDisponiveis'){
+		$dados = $_POST;
+		$car->getCarrosDisponiveis($dados);
 	}
 	if($_POST['type'] == 'getCarroPorId'){
 		$car_id = $_POST['car_id'];
@@ -27,6 +32,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		$car_id = $_POST['car_id'];
 		$car->updateCarro($formData,$car_id);
 	}
+
 }
 
 if($_SERVER['REQUEST_METHOD']=="GET"){

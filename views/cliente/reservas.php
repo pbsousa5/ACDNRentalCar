@@ -138,8 +138,6 @@ if(empty($_SESSION['cli_id'])){
 
 <script type="text/javascript">
 
-	$('#myModal').modal();
-
 	$('.btnHistorico').on('click',function(){
 		clienteData = [];
 		cli_id = '<?php echo $_SESSION[cli_id] ?>';
@@ -155,14 +153,12 @@ if(empty($_SESSION['cli_id'])){
 			success: function (response) {  
 				response = JSON.parse(response);
 				historico = response[0];
-				console.log(historico);
 
 
 				$('#modalAlgAtivos').modal();
 				$('.historico').html('');
 				for(var i = 0; i < response.length; i++){
 					marca = '<div class="marca">'+response[i].marca+'</div>';
-					console.log(marca);
 					modelo = '<div class="modelo">'+response[i].modelo+'</div>';
 					placa = '<div class="placa"><b>Placa:</b> '+response[i].placa+'</div>';
 					cor = '<div class="cor"><b>Cor:</b> '+response[i].cor+'</div>';
@@ -184,29 +180,19 @@ if(empty($_SESSION['cli_id'])){
 	 	});		
 	})
 
-
 	$('#check').hide();
 
-   var pickerDisp = new Pikaday({ 
-        field: $('#dataInicioDisp')[0],
-        format: 'DD/MM/YYYY',  
-    });
-
-   var picker2Disp = new Pikaday({ 
-        field: $('#dataFimDisp')[0],
-        format: 'DD/MM/YYYY',         
-    });
 
 
    var picker = new Pikaday({ 
         field: $('#dataInicio')[0],
-        format: 'DD/MM/YYYY', 
+        format: 'YYYY-MM-DD', 
         minDate: moment().toDate(), 
     });
 
    var picker2 = new Pikaday({ 
         field: $('#dataFim')[0],
-        format: 'DD/MM/YYYY', 
+        format: 'YYYY-MM-DD', 
         minDate: moment().add(1,'days').toDate(), //Pelo menos um dia de diferença.
     });
 
@@ -240,7 +226,7 @@ if(empty($_SESSION['cli_id'])){
 	});
 
 	data = [];
-	data.push({name:'type',value:'getCarro'});
+	data.push({name:'type',value:'getCarrosDisponiveis'});
 
 	$.ajax({
 		url: "controls/CarroControl.php",
@@ -281,7 +267,7 @@ if(empty($_SESSION['cli_id'])){
 					$('#marca').val($(this).data("marca"));
 					$('#ano').val($(this).data("ano"));
 
-					 $('.btnAlugar').removeAttr("disabled");
+					$('.btnAlugar').removeAttr("disabled");
 					$('.btnAlugar').val($(this).data("id"));
 				});
 
@@ -331,7 +317,8 @@ if(empty($_SESSION['cli_id'])){
 							data: data,
 							dateType: "json",
 							success: function (response) {  
-								console.log(response);
+								alert(response);
+								location.reload();
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
 							 alert(textStatus, errorThrown);
@@ -345,6 +332,7 @@ if(empty($_SESSION['cli_id'])){
 		 alert(textStatus, errorThrown);
 		}
 	 });
+
 </script>
   
 </body>

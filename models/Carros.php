@@ -20,6 +20,18 @@ public function getCarros(){
 		}
 	}
 
+public function getCarrosDisponiveis(){
+	try{
+		$db = getDB();
+		$stmt = $db->prepare("select c.car_id,c.placa,c.cor,c.modelo,c.marca,c.ano,c.foto from carro c left join locacao l on c.car_id = l.car_id	where l.data_devolucao < curdate() or c.car_id not in (select l2.car_id from locacao l2)");  
+		$stmt->execute();
+		$data = $stmt->fetchAll(PDO::FETCH_OBJ); //User data
+		echo json_encode($data);
+		}catch(PDOException $e) {
+			echo '{"error":{"text":'. $e->getMessage() .'}}';
+		}
+	}
+
 public function countCarros(){
 	try{
 		$db = getDB();
