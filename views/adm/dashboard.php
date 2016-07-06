@@ -126,7 +126,18 @@ function countClientes(){
         $('#content').load('views/adm/count.html',function(){
             countCarros();
             countLocadoras();
-            countClientes();            
+            countClientes();          
+                $('#viewLocs').on('click',function(){
+                    $('#viewLoc').click();
+                });
+
+                $('#viewCars').on('click',function(){
+                    $('#viewCar').click();
+                });
+
+                $('#viewClientes').on('click',function(){
+                    $('#viewCli').click();
+                });  
         });
         $('#grid').load('views/adm/progress.html');
         $('#body').html('');
@@ -169,6 +180,7 @@ function countClientes(){
         $('#content').html('');
         $('#grid').html('');
     });
+
 
 </script>
 
