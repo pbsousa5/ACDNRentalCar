@@ -13,7 +13,7 @@
 }
 
 .vitrineCarros{
-	margin-top: 150px;
+	margin-top: 70px;
 }
 
 #check{
@@ -21,4 +21,12 @@
   right: 150;
   bottom: 0;
   max-height: 100px;
+}
+
+#infoVeiculo{
+  padding: 0px;
+}
+
+.aluguel{
+  margin-top: 40px;
 }
