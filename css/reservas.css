@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,700);
+
+.fotoCarro{
+  max-height: 270px;
+  margin-left: 220px;
+  background-blend-mode: screen multiply;
+}
+
+.navbar,
+.navbar-fixed-top{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.vitrineCarros{
+	margin-top: 150px;
+}
+
+#check{
+  position: absolute;
+  right: 150;
+  bottom: 0;
+  max-height: 100px;
+}
